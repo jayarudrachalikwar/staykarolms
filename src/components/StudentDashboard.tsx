@@ -18,7 +18,7 @@ interface StudentDashboardProps {
 
 // ── Micro-animation keyframes injected once ──────────────────────────────────
 const injectedStyle = typeof document !== 'undefined' && (() => {
-  const id = 'trailbliz-dash-anims';
+  const id = 'staykaro-dash-anims';
   if (document.getElementById(id)) return true;
   const s = document.createElement('style');
   s.id = id;

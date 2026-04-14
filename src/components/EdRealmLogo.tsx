@@ -1,26 +1,24 @@
 import React from 'react';
+import staykaroLogo from '../assets/staykaro-logo.png';
 
-export function TrailblizLogo({ className = '', size = 'normal' }: { className?: string, size?: 'small' | 'normal' | 'large' }) {
+export function StaykaroLogo({ className = '', size = 'normal' }: { className?: string, size?: 'small' | 'normal' | 'large' }) {
   const sizeStyles = {
     small: {
       containerGap: 'gap-2',
-      markSize: 32,
-      markFontSize: 11,
-      textFontSize: 18,
+      markSize: 36,
+      textFontSize: 16,
       taglineShow: false,
     },
     normal: {
       containerGap: 'gap-2.5',
-      markSize: 40,
-      markFontSize: 13,
-      textFontSize: 22,
+      markSize: 44,
+      textFontSize: 20,
       taglineShow: false,
     },
     large: {
       containerGap: 'gap-3',
-      markSize: 60,
-      markFontSize: 20,
-      textFontSize: 34,
+      markSize: 64,
+      textFontSize: 30,
       taglineShow: true,
     },
   } as const;
@@ -29,47 +27,21 @@ export function TrailblizLogo({ className = '', size = 'normal' }: { className?:
 
   return (
     <div className={`flex items-center whitespace-nowrap shrink-0 ${s.containerGap} ${className}`}>
-      {/* TB mark */}
-      <div
-        style={{
-          width: s.markSize,
-          height: s.markSize,
-          borderRadius: s.markSize * 0.22,
-          background: '#1A56DB',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          boxShadow: '0 2px 8px rgba(26,86,219,0.30)',
-          flexShrink: 0,
-        }}
-      >
-        <span
-          style={{
-            color: '#fff',
-            fontWeight: 900,
-            fontSize: s.markFontSize,
-            letterSpacing: '-0.5px',
-            fontFamily: 'Arial, sans-serif',
-            lineHeight: 1,
-          }}
-        >
-          TB
-        </span>
-      </div>
+      <img src={staykaroLogo} alt="StayKaro logo" style={{ width: s.markSize, height: s.markSize, objectFit: 'contain', flexShrink: 0 }} />
 
-      {/* trailbliz text + optional tagline */}
+      {/* StayKaro text + optional tagline */}
       <div className="flex flex-col leading-none shrink-0">
         <span
           style={{
             fontWeight: 800,
             fontSize: s.textFontSize,
-            color: '#1A56DB',
+            color: '#ff0028',
             letterSpacing: '-0.5px',
             fontFamily: "'Arial Black', Arial, sans-serif",
             lineHeight: 1,
           }}
         >
-          trailbliz
+          StayKaro Pvt Ltd
         </span>
         {s.taglineShow && (
           <span
@@ -81,7 +53,7 @@ export function TrailblizLogo({ className = '', size = 'normal' }: { className?:
               letterSpacing: '0.02em',
             }}
           >
-            Empowering Students, Building Futures
+            Premium Student Living Platform
           </span>
         )}
       </div>
@@ -90,4 +62,4 @@ export function TrailblizLogo({ className = '', size = 'normal' }: { className?:
 }
 
 // Backward-compat alias used throughout the app
-export const EdRealmLogo = TrailblizLogo;
+export const EdRealmLogo = StaykaroLogo;

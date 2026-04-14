@@ -3,6 +3,7 @@ import { motion, useMotionValue, useSpring, AnimatePresence, useAnimation } from
 import { useAuth } from '../lib/auth-context';
 import { Mail, Lock, ArrowRight, KeyRound, Eye, EyeOff } from 'lucide-react';
 import { toast } from 'sonner';
+import staykaroLogo from '../assets/staykaro-logo.png';
 
 const PRIMARY = 'var(--color-primary, #1A56DB)';
 const PRIMARY_LIGHT = 'var(--color-primary-light, #3B82F6)';
@@ -139,25 +140,11 @@ export function SignIn() {
           backdropFilter: 'blur(12px)',
         }}
       >
-        <div
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 12,
-            background: PRIMARY,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: `0 4px 16px rgba(26, 86, 219, 0.45)`,
-            flexShrink: 0,
-          }}
-        >
-          <span style={{ color: '#fff', fontWeight: 900, fontSize: 14, letterSpacing: '-0.5px' }}>TB</span>
-        </div>
+        <img src={staykaroLogo} alt="StayKaro logo" style={{ width: 54, height: 54, objectFit: 'contain', borderRadius: 8, flexShrink: 0 }} />
         <div>
-          <div style={{ fontWeight: 800, fontSize: 18, letterSpacing: '-0.3px', color: '#fff' }}>trailbliz</div>
+          <div style={{ fontWeight: 800, fontSize: 18, letterSpacing: '-0.3px', color: '#fff' }}>StayKaro Pvt Ltd</div>
           <div style={{ fontSize: 11, color: lampOn ? 'rgba(255,255,255,0.75)' : 'rgba(255,255,255,0.45)' }}>
-            Empowering Students, Building Futures
+            Premium Student Living Platform
           </div>
         </div>
       </header>
@@ -522,22 +509,9 @@ export function SignIn() {
 
                 <div style={{ marginBottom: 26 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
-                    <div
-                      style={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 12,
-                        background: PRIMARY,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0 4px 18px rgba(26, 86, 219, 0.5)',
-                      }}
-                    >
-                      <span style={{ color: '#fff', fontWeight: 900, fontSize: 12 }}>TB</span>
-                    </div>
+                    <img src={staykaroLogo} alt="StayKaro logo" style={{ width: 42, height: 42, objectFit: 'contain', borderRadius: 8, flexShrink: 0 }} />
                     <div>
-                      <div style={{ fontWeight: 800, fontSize: 17, color: '#fff' }}>trailbliz</div>
+                      <div style={{ fontWeight: 800, fontSize: 17, color: '#fff' }}>StayKaro Pvt Ltd</div>
                       <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)' }}>Sign in to your workspace</div>
                     </div>
                   </div>
